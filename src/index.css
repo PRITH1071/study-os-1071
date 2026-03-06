@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 222 30% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 16%;
+    --input: 222 30% 16%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    --xp: 142 71% 45%;
+    --streak: 25 95% 53%;
+    --level: 262 83% 58%;
+    --glow-primary: 0 0 20px hsl(142 71% 45% / 0.3);
+    --glow-accent: 0 0 20px hsl(25 95% 53% / 0.3);
+    --glow-level: 0 0 20px hsl(262 83% 58% / 0.3);
+
+    --sidebar-background: 222 47% 7%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 222 30% 16%;
+    --sidebar-ring: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  .glow-level {
+    box-shadow: var(--glow-level);
+  }
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl;
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(142 71% 45%), hsl(160 71% 40%));
+  }
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(25 95% 53%), hsl(40 95% 50%));
+  }
+  .gradient-level {
+    background: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 83% 55%));
+  }
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(142 71% 45%), hsl(160 71% 40%));
+  }
+}

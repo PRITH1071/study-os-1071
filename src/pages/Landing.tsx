@@ -141,4 +141,18 @@ export default function Landing() {
       </footer>
     </div>
   );
+  <h2>Math Practice Task</h2>
+
+<p><strong>Task 1 – Linear Equations</strong></p>
+
+<p>
+Solve:
+<br/>3x + 7 = 22
+<br/>5x − 9 = 16
+<br/>2(x + 4) = 18
+</p>
+
+<p>Time limit: 15 minutes</p>
+
+<button>Start Task</button>
 }

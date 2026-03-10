@@ -1,0 +1,74 @@
+<h2>Class 9 Math Task</h2>
+
+<p><b>Task 1 – Linear Equations</b></p>
+
+<p>
+Solve:
+<br>3x + 7 = 22
+<br>5x − 9 = 16
+<br>2(x + 4) = 18
+</p>
+
+<p>Time limit: 15 minutes</p>
+
+<button onclick="startTimer()">Start Task</button>
+
+<p id="timer"></p>
+
+<script>
+function startTimer(){
+
+let time = 900;
+let display = document.getElementById("timer");
+
+let interval = setInterval(function(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+display.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+time--;
+
+if(time < 0){
+clearInterval(interval);
+display.innerHTML = "Time Finished";
+}
+
+},1000);
+
+}
+</script>
+
+<script>
+function startTimer(){
+
+let time = 900;
+let display = document.getElementById("timer");
+
+let interval = setInterval(function(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+display.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+time--;
+
+if(time < 0){
+clearInterval(interval);
+display.innerHTML = "Time Finished";
+}
+
+},1000);
+
+}
+</script>
+
+<iframe
+src="<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJOXPJ8LjDpEnh8L24CjOBy1LygORxBOSf1sK3be9bj24psQ/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>"
+width="640"
+height="800"
+frameborder="0">
+Loading…
+</iframe>
